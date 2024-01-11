@@ -12,41 +12,50 @@
             border-radius: 10px;
             display: grid;
 
-            /* columnas con grid */
+            /* COLUMNAS CON GRID */
             /* Se pueden mezclar unidades, pero no es recomendable */
             /* con "auto" el navegador decide cual es el espacio que debe utilizar y toma en cuenta el espacio disponible y el contenido el texto*/
             /* grid-template-columns: auto 20px 100px; */
             /* grid-template-columns: 50% 100px auto 10vw; */
             /* grid-template-columns: 100px 100px 100px; */
 
-            /* Unidad especial (fr) fraccion */
+            /* UNIDAD ESPECIAL (fr) fraccion */
             /*  1fr -> 100% del espacio*/
             /* 1fr 1fr --> 2 columnas (50% del espacio cada una) */
             /* 1fr 2fr --> la segunda columna va ser el doble de la primera*/
             /* 1fr 100px -->  (100% del espacio) - 100px = 1fr*/
             /* grid-template-columns: 1fr 2fr; */
 
+            /* FILAS */
             /* grid-template-columns: 1fr 1fr; */
             /* filas en grid, altura de las filas*/
             /* hemos creado una fila de más de 50px, es una cuadrícula sin elemento */
             /* grid-template-rows: 100px 50px 30px 100px 50px; */
 
+            /* FILAS AUTOMÁTICAS */
             /* grid-template-columns: 1fr 1fr; */
             /* grid-auto-rows --> para filas automáticas, para que tengan una altura ya establecida*/
             /* grid-auto-rows: 50px; */
             /* podemos indicar una altura diferente  a alguna fila, en este caso queremos que la primera fila sea de 100px y las demás automáticas */
             /* grid-template-rows: 100px;  */
 
+            /* REPEAT() */
             /* propiedad repeat() --> permite escribir una gran cantidad de columnas o filas que exhiben un patrón recurrente en una forma más compacta*/
             /* grid-template-columns: repeat(3, 1fr); */
             /* grid-template-rows: repeat(3, 100px); */
             
+            /* MÁS SOBRE REPEAT() */
             /* Puedes crear repeat y poner diferentes medidas a otros columnas, en este caso queremos que las columnas 2,3,4 tengan 1fr */
             /* grid-template-columns: 25px repeat(3, 1fr) 25px; */
             
             /* Tambien podemos repetir varias filas con el repeat, en este caso queremos que 3 veces se pongan 25px la primera y 50px la segunda (o sea la 1, 3, 5 columnas vna a medir 25px y la 2,4,6 van a medir 50px) */
-            grid-template-columns: repeat(3, 25px 50px);
-            grid-template-rows: repeat(3, 100px);
+            /* grid-template-columns: repeat(3, 25px 50px);
+            grid-template-rows: repeat(3, 100px); */
+
+            /* MINIMO Y MAXIMO DE 1 COLUMNA */
+            /* cuando el 33,33% del espacio sea menor a 100px, se va a quedar en 100px */
+            /* como mínimo va tomar 100px y como máximo 1fr */
+            grid-template-columns: minmax(100px, 1fr) 1fr 1fr;
 
         }
         .container div{
