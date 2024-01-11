@@ -5,9 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid</title>
 
-    
+    <style>
+        .container{
+            background-color: lightsalmon;
+            border: solid 3px black;
+            border-radius: 10px;
+            display: grid;
+            /* columnas con grid */
+            /* Se pueden mezclar unidades, pero no es recomendable */
+            /* con "auto" el navegador decide cual es el espacio que debe utilizar y toma en cuenta el espacio disponible y el contenido el texto*/
+            /* grid-template-columns: auto 20px 100px; */
+            grid-template-columns: 50% 100px auto 10vw;
+            /* grid-template-columns: 100px 100px 100px; */
+
+
+        }
+        .container div{
+            background-color: lightblue;
+            border: solid 2px #09f;
+            border-radius: 6px;
+        }
+
+        body{
+            background-color: #ddd;
+        }
+    </style>
+
 </head>
 <body>
-    
+    <section class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+    </section>
 </body>
 </html>
