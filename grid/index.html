@@ -26,11 +26,16 @@
             /* 1fr 100px -->  (100% del espacio) - 100px = 1fr*/
             /* grid-template-columns: 1fr 2fr; */
 
-            grid-template-columns: 1fr 1fr;
+            /* grid-template-columns: 1fr 1fr; */
             /* filas en grid, altura de las filas*/
             /* hemos creado una fila de más de 50px, es una cuadrícula sin elemento */
-            grid-template-rows: 100px 50px 30px 100px 50px;
+            /* grid-template-rows: 100px 50px 30px 100px 50px; */
 
+            grid-template-columns: 1fr 1fr;
+            /* grid-auto-rows --> para filas automáticas, para que tengan una altura ya establecida*/
+            grid-auto-rows: 50px;
+            /* podemos indicar una altura diferente  a alguna fila, en este caso queremos que la primera fila sea de 100px y las demás automáticas */
+            grid-template-rows: 100px; 
 
         }
         .container div{
