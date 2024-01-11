@@ -11,12 +11,20 @@
             border: solid 3px black;
             border-radius: 10px;
             display: grid;
+
             /* columnas con grid */
             /* Se pueden mezclar unidades, pero no es recomendable */
             /* con "auto" el navegador decide cual es el espacio que debe utilizar y toma en cuenta el espacio disponible y el contenido el texto*/
             /* grid-template-columns: auto 20px 100px; */
-            grid-template-columns: 50% 100px auto 10vw;
+            /* grid-template-columns: 50% 100px auto 10vw; */
             /* grid-template-columns: 100px 100px 100px; */
+
+            /* Unidad especial (fr) fraccion */
+            /*  1fr -> 100% del espacio*/
+            /* 1fr 1fr --> 2 columnas (50% del espacio cada una) */
+            /* 1fr 2fr --> la segunda columna va ser el doble de la primera*/
+            /* 1fr 100px -->  (100% del espacio) - 100px = 1fr*/
+            grid-template-columns: 1fr 2fr;
 
 
         }
