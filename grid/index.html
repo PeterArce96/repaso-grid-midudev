@@ -24,7 +24,12 @@
             /* 1fr 1fr --> 2 columnas (50% del espacio cada una) */
             /* 1fr 2fr --> la segunda columna va ser el doble de la primera*/
             /* 1fr 100px -->  (100% del espacio) - 100px = 1fr*/
-            grid-template-columns: 1fr 2fr;
+            /* grid-template-columns: 1fr 2fr; */
+
+            grid-template-columns: 1fr 1fr;
+            /* filas en grid, altura de las filas*/
+            /* hemos creado una fila de más de 50px, es una cuadrícula sin elemento */
+            grid-template-rows: 100px 50px 30px 100px 50px;
 
 
         }
