@@ -38,9 +38,15 @@
             /* grid-template-rows: 100px;  */
 
             /* propiedad repeat() --> permite escribir una gran cantidad de columnas o filas que exhiben un patrón recurrente en una forma más compacta*/
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 100px);
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* grid-template-rows: repeat(3, 100px); */
             
+            /* Puedes crear repeat y poner diferentes medidas a otros columnas, en este caso queremos que las columnas 2,3,4 tengan 1fr */
+            /* grid-template-columns: 25px repeat(3, 1fr) 25px; */
+            
+            /* Tambien podemos repetir varias filas con el repeat, en este caso queremos que 3 veces se pongan 25px la primera y 50px la segunda (o sea la 1, 3, 5 columnas vna a medir 25px y la 2,4,6 van a medir 50px) */
+            grid-template-columns: repeat(3, 25px 50px);
+            grid-template-rows: repeat(3, 100px);
 
         }
         .container div{
