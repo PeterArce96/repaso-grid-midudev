@@ -1,0 +1,12 @@
+GRID
+
+¿Qué es Grid?
+Tener una cuadrícula y podemos controlarla en 2 dimensiones.
+Una cuadrícula de líneas horizontales y verticales que hacen intersección y en ellas podemos tomar elementos.
+
+Características
+Los elementos pueden tener tamaños fijos o flexibles, podemos posicionar elementos en cualquier sitio de la cruadrícula. Los elementos se van colocando y podemos superponer elementos.
+
+Diferencia entre Flex y Grid
+Flex es unidimensional (una dimensión, o son filas o son columnas)
+GRID bidimensional (filas y columnas).
