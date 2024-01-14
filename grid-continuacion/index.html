@@ -26,8 +26,16 @@
             background-color: lightgreen;
             border: 2px solid green;
             /* Indican en que cuadricula de las columnas empieza este div y donde termina */
-            grid-column-start: 2;
-            grid-column-end: 4;
+            /* grid-column-start: 1;
+            grid-column-end: 2; */
+
+            /* Indican en que cuadricula de las filas empieza y termina el div */
+            /* grid-row-start: 1;
+            grid-row-end: 3; */
+
+            /* También podemos decirle lo que ocupa directamente */
+            grid-column-start: span 2;
+            grid-row-start: span 2;
         }
 
         body{
@@ -45,6 +53,7 @@
         <div>5</div>
         <div>6</div>
         <div>7</div>
+        <div>8</div>
     </section>
 </body>
 </html>
