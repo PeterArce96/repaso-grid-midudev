@@ -9,9 +9,11 @@
         div{
             display: grid;
             grid-template-columns: repeat(
-                /* auto-fill --> automáticamente coloca otra columna que satisfaga el tamaño mínimo, en el ejemplo si hay 200px minimo, si llega a 400 px pone otra columna, si llega a 600px pone otra y así.  */
+                /* auto-fill --> Rellena el contenido, deja trozos de la cuadrícula vacíos y rellena los huecos. Automáticamente coloca otra columna que satisfaga el tamaño mínimo, en el ejemplo si hay 200px minimo, si llega a 400 px pone otra columna, si llega a 600px pone otra y así.  */
                 auto-fill,
                 minmax(200px, 1fr)
+
+                /* auto-fit --> Ajusta el contenido y lo estira hasta los límites, ocupa todo el espacio, si no hay más elementos voy a ocupar más espacio y haré los elementos más grandes */
             );
 
             /* Espacio entre columnas */
