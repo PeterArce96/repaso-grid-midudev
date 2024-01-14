@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-continuación</title>
+
+    <style>
+        .container{
+            background-color: lightsalmon;
+            border: solid 3px black;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: minmax(100px, 1fr) 1fr 1fr;
+            grid-auto-rows: 50px;
+            gap: 4px;
+
+        }
+        .container div{
+            background-color: lightblue;
+            border: solid 2px #09f;
+            border-radius: 6px;
+        }
+
+        .container div:first-child{
+            background-color: lightgreen;
+            border: 2px solid green;
+            /* Indican en que cuadricula de las columnas empieza este div y donde termina */
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        body{
+            background-color: #ddd;
+        }
+    </style>
+
+</head>
+<body>
+    <section class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+    </section>
+</body>
+</html>
