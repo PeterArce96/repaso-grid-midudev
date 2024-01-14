@@ -34,8 +34,18 @@
             grid-row-end: 3; */
 
             /* También podemos decirle lo que ocupa directamente */
-            grid-column-start: span 2;
-            grid-row-start: span 2;
+            /* grid-column-start: span 2;
+            grid-row-start: span 2; */
+
+            /* ATAJO MÁS SIMPLE PARA GRID-COLUMN Y GRID-ROW */
+            grid-column: 2/4;
+            grid-row: 2/3;
+        }
+
+        .container div:nth-child(2){
+            background-color: lightseagreen;
+            border: 2px solid blue;
+            grid-column: 1/3
         }
 
         body{
