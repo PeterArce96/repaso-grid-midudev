@@ -8,7 +8,11 @@
     <style>
         div{
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(
+                /* auto-fill --> automáticamente coloca otra columna que satisfaga el tamaño mínimo, en el ejemplo si hay 200px minimo, si llega a 400 px pone otra columna, si llega a 600px pone otra y así.  */
+                auto-fill,
+                minmax(200px, 1fr)
+            );
 
             /* Espacio entre columnas */
             /* grid-column-gap: 16px; */
@@ -17,6 +21,8 @@
 
             /* Espacio entre filas, el primer valor es para filas y columnas, el segundo valor para columnas. Si solo hay un valor las filas y columnas toman ese valor*/
             gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
         }
         img{
             border-radius: 8px;
@@ -24,7 +30,7 @@
             height: auto;
         }
 
-        @media (width > 300px){
+        /* @media (width > 300px){
             div{
                 grid-template-columns: 1fr 1fr;
             }
@@ -34,13 +40,18 @@
                 grid-template-columns: 1fr 1fr 1fr;
             }
         }
-        
+         */
     </style>
 
 
 </head>
 <body>
     <div>
+        <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
+        <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
+        <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
+        <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
+        <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
         <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
         <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
         <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
