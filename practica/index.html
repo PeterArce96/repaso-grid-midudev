@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica</title>
+
+    <style>
+        div{
+            display: grid;
+            grid-template-columns: 1fr;
+
+            /* Espacio entre columnas */
+            /* grid-column-gap: 16px; */
+            /* Espacio entre filas*/
+            /* row-gap: 32px; */
+
+            /* Espacio entre filas, el primer valor es para filas y columnas, el segundo valor para columnas. Si solo hay un valor las filas y columnas toman ese valor*/
+            gap: 16px;
+        }
+        img{
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+        }
+
+        @media (width > 300px){
+            div{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (width > 600px){
+            div{
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        
+    </style>
+
+
+</head>
+<body>
+    <div>
+        <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
+        <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
+        <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
+        <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
+        <img src="https://th.bing.com/th/id/OIP.nfEMVTdKvwQUi1EXVXi3pAHaK-?rs=1&pid=ImgDetMain">
+    </div>
+</body>
+</html>
