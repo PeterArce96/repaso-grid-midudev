@@ -14,21 +14,46 @@
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: repeat(3, minmax(100px, 1fr));
             min-height: 100vh;
+            /* Para usar grid-template-areas, primero debes colocarle un nombre a los elementos con grid-area: "", luego usar la propiedad en el container para dibujar el grid con los nombres de los elementos */
+            grid-template-areas: 
+                "header header sidebar"
+                "content content content"
+                "footer footer footer"
+            ;
         }
+        /* podemos usar la mediaquery para cambiar el dibujo de las áreas del grid */
+        @media (width > 600px){
+            .container{
+                grid-template-areas: 
+                "header header header"
+                "sidebar content content"
+                "footer footer footer"
+            ;
+            }
+        }
+
+
         .container header{
             background-color: #09f;
-            grid-column: 1/-1; /*De punta  a punta*/
+            grid-area: header;
+
+            /* grid-column: 1/-1; De punta  a punta */
         }
         .container aside{
             background-color: yellow;
+            grid-area: sidebar;
         }
         .container main{
             background-color: red;
-            grid-column: span 2;
+            grid-area: content;
+
+            /* grid-column: span 2; */
         }
         .container footer{
             background-color: gray;
-            grid-column: 1/-1;
+            grid-area: footer;
+
+            /* grid-column: 1/-1; */
         }
     </style>
 </head>
