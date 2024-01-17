@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alineacion-Grid</title>
+
+    <style>
+        .container{
+            background-color: lightsalmon;
+            border: solid 3px black;
+            border-radius: 10px;
+            display: grid;
+            grid-auto-rows: 50px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            height: 300px;
+            /* Alinear en línea */
+            justify-items: center;
+            /* Alineación en bloque */
+            align-items: center;
+
+        }
+
+        .container div{
+            background-color: lightblue;
+            border: solid 2px #09f;
+            border-radius: 6px;
+        }
+
+        .container div:first-child{
+            background-color: lightgreen;
+            border: 2px solid green;
+            z-index: 9999;
+            /* alinear solo un elemento */
+            justify-self: center;
+
+        }
+
+        .container div:nth-child(2){
+            background-color: lightseagreen;
+            border: 2px solid blue;
+
+        }
+
+        body{
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </section>
+</body>
+</html>
