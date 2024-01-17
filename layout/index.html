@@ -22,12 +22,14 @@
             ;
         }
         /* podemos usar la mediaquery para cambiar el dibujo de las áreas del grid */
+
         @media (width > 600px){
             .container{
+                /* puedes dejar cuadriculas en blanco poniendo un punto (.) "header header ." */
                 grid-template-areas: 
-                "header header header"
+                "header header ."
                 "sidebar content content"
-                "footer footer footer"
+                ". footer footer"
             ;
             }
         }
